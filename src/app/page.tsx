@@ -1,10 +1,9 @@
 import { 
-  Code, 
-  Zap, 
   Mail, 
-  MessageCircle,
-  Star,
-  Monitor,
+  MessageCircle, 
+  Star, 
+  Code, 
+  Zap,
   BarChart3,
   Globe,
   Database,
@@ -529,9 +528,9 @@ export default function Home() {
                 <span className="ml-2 text-sm text-gray-600">5.0</span>
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                "랜딩페이지 제작을 의뢰했는데, 기대 이상의 결과물이 나왔습니다. 
+                &ldquo;랜딩페이지 제작을 의뢰했는데, 기대 이상의 결과물이 나왔습니다. 
                 특히 모바일 최적화가 정말 잘 되어있고, SEO도 완벽하게 적용해주셨어요. 
-                덕분에 전환율이 30% 이상 증가했습니다!"
+                덕분에 전환율이 30% 이상 증가했습니다!&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
@@ -555,9 +554,9 @@ export default function Home() {
                 <span className="ml-2 text-sm text-gray-600">5.0</span>
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                "관리자 대시보드 개발을 맡겼는데, 정말 직관적이고 사용하기 편하게 만들어주셨습니다. 
+                &ldquo;관리자 대시보드 개발을 맡겼는데, 정말 직관적이고 사용하기 편하게 만들어주셨습니다. 
                 복잡한 데이터도 한눈에 보기 쉽게 정리되어 있어서 업무 효율이 크게 향상되었어요. 
-                소통도 원활하고 일정도 정확히 지켜주셔서 만족합니다."
+                소통도 원활하고 일정도 정확히 지켜주셔서 만족합니다.&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center">
@@ -581,9 +580,9 @@ export default function Home() {
                 <span className="ml-2 text-sm text-gray-600">5.0</span>
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                "급하게 이벤트 페이지가 필요했는데, 3일 만에 완성해주셨어요! 
+                &ldquo;급하게 이벤트 페이지가 필요했는데, 3일 만에 완성해주셨어요! 
                 디자인도 세련되고 로딩 속도도 빨라서 광고 효과가 정말 좋았습니다. 
-                다음에도 또 의뢰하고 싶어요. 빠른 대응과 높은 품질 모두 만족합니다."
+                다음에도 또 의뢰하고 싶어요. 빠른 대응과 높은 품질 모두 만족합니다.&rdquo;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center">
