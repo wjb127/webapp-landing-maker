@@ -279,7 +279,7 @@ export default function Home() {
             <div className="text-center">
               <MessageCircle className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-4 text-blue-200" />
               <h3 className="text-base sm:text-lg font-semibold mb-2">카카오톡</h3>
-              <p className="text-sm sm:text-base text-blue-100">@loantail</p>
+              <p className="text-sm sm:text-base text-blue-100">loantail</p>
             </div>
 
             <div className="text-center">
@@ -339,7 +339,7 @@ export default function Home() {
               <h3 className="text-base sm:text-lg font-semibold mb-4">연락처</h3>
               <ul className="space-y-2 text-sm sm:text-base text-gray-400">
                 <li>이메일: wjb127@naver.com</li>
-                <li>카카오톡: @loantail</li>
+                <li>카카오톡: loantail</li>
                 <li>크몽: 프로필 링크</li>
               </ul>
             </div>
