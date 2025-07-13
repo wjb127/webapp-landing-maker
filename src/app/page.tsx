@@ -26,7 +26,7 @@ export default function Home() {
             <nav className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-500 hover:text-gray-900">서비스</a>
               <a href="#process" className="text-gray-500 hover:text-gray-900">작업절차</a>
-              <a href="#portfolio" className="text-gray-500 hover:text-gray-900">포트폴리오</a>
+              {/* <a href="#portfolio" className="text-gray-500 hover:text-gray-900">포트폴리오</a> */}
               <a href="#faq" className="text-gray-500 hover:text-gray-900">FAQ</a>
               <a href="#contact" className="text-gray-500 hover:text-gray-900">연락처</a>
             </nav>
@@ -51,7 +51,7 @@ export default function Home() {
                 지금 의뢰하기
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                포트폴리오 보기
+                서비스 보기
               </button>
             </div>
           </div>
@@ -156,7 +156,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Portfolio Section - Hidden for now */}
+      {/* 
       <section id="portfolio" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -207,6 +208,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* FAQ Section */}
       <section id="faq" className="py-20 bg-gray-50">
