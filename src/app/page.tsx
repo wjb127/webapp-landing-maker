@@ -19,26 +19,33 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <StructuredData />
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4 md:py-6">
+          <div className="flex justify-between items-center h-16 sm:h-20">
             <div className="flex items-center">
               <Code className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
-              <span className="ml-2 text-lg sm:text-xl font-bold text-gray-900">웹개발 외주 전문</span>
+              <span className="ml-2 text-lg sm:text-xl font-bold text-gray-900">웹개발 외주</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors">서비스</a>
-              <a href="#process" className="text-gray-500 hover:text-gray-900 transition-colors">작업절차</a>
-              {/* <a href="#portfolio" className="text-gray-500 hover:text-gray-900 transition-colors">포트폴리오</a> */}
-              <a href="#faq" className="text-gray-500 hover:text-gray-900 transition-colors">FAQ</a>
-              <a href="#contact" className="text-gray-500 hover:text-gray-900 transition-colors">연락처</a>
+              <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">서비스</a>
+              <a href="#process" className="text-gray-600 hover:text-blue-600 transition-colors">프로세스</a>
+              <a href="#portfolio" className="text-gray-600 hover:text-blue-600 transition-colors">포트폴리오</a>
+              <a href="#faq" className="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a>
+              <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">연락처</a>
             </nav>
+            <div className="md:hidden">
+              <button className="text-gray-600 hover:text-blue-600">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
           <div className="absolute inset-0 bg-black/20"></div>
@@ -623,59 +630,324 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section - Hidden for now */}
-      {/* 
-      <section id="portfolio" className="py-20">
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <div className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
               포트폴리오
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <span className="block">실제 프로젝트</span>
+              <span className="block bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">성공 사례</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              다양한 업종의 성공적인 프로젝트 경험
+            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              다양한 업종의 고객들과 함께한 성공적인 프로젝트들을 확인해보세요
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">이커머스 랜딩페이지</h3>
-                <p className="text-gray-600 mb-4">제품 판매용 랜딩페이지 제작<br />결제 시스템 연동</p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>작업기간: 1주</span>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Portfolio 1 - 스마트스토어 셀러용 랜딩페이지 */}
+            <div className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+              {/* Project Preview */}
+              <div className="relative h-64 bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-600/20"></div>
+                <div className="absolute top-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-gray-200 rounded w-3/4"></div>
+                      <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                      <div className="h-8 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                    <Zap className="h-6 w-6 text-purple-600" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Project Details */}
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">🛍</span>
+                    </div>
+                    <span className="text-sm font-medium text-gray-500">스마트스토어</span>
+                  </div>
+                  <div className="flex items-center space-x-1 text-yellow-400">
+                    <Star className="h-4 w-4 fill-current" />
+                    <span className="text-sm font-medium text-gray-600">5.0</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  네일아트 키트 판매 랜딩페이지
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  스마트스토어 셀러를 위한 고전환 랜딩페이지 제작
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                    제품 소개 → 사용 후기 → 구매 문의 CTA
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                    이메일 수집폼 + 버튼 클릭 추적
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                    반응형 디자인 + 모바일 최적화
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-4 mb-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-2xl font-bold text-purple-600">27건</div>
+                      <div className="text-sm text-gray-600">DM 문의 전환</div>
+                    </div>
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                      <MessageCircle className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <a 
+                    href="https://nailkit-demo.vercel.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm group-hover:underline"
+                  >
+                    사이트 보기
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <span className="text-xs text-gray-400">2024.01</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">교육업체 관리시스템</h3>
-                <p className="text-gray-600 mb-4">수강생 관리 대시보드<br />출석 체크 시스템</p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>작업기간: 2주</span>
+            {/* Portfolio 2 - 클래스101 강의 페이지 */}
+            <div className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+              {/* Project Preview */}
+              <div className="relative h-64 bg-gradient-to-br from-green-100 via-teal-50 to-blue-100 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-600/20"></div>
+                <div className="absolute top-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+                      <div className="h-2 bg-gray-200 rounded w-4/5"></div>
+                      <div className="h-8 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                    <BarChart3 className="h-6 w-6 text-teal-600" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Project Details */}
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">🎓</span>
+                    </div>
+                    <span className="text-sm font-medium text-gray-500">온라인 클래스</span>
+                  </div>
+                  <div className="flex items-center space-x-1 text-yellow-400">
+                    <Star className="h-4 w-4 fill-current" />
+                    <span className="text-sm font-medium text-gray-600">5.0</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                  온라인 미술 클래스 강의 페이지
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  클래스101 스타일의 커스텀 강의 소개 페이지
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                    강의 커리큘럼 + 수강생 후기
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                    Supabase 신청 데이터 저장
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                    수강 신청 버튼 + 예약 폼
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-teal-50 to-green-50 rounded-2xl p-4 mb-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-2xl font-bold text-teal-600">14건</div>
+                      <div className="text-sm text-gray-600">첫 주 수강 신청</div>
+                    </div>
+                    <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-green-600 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <a 
+                    href="https://classpaint.vercel.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm group-hover:underline"
+                  >
+                    사이트 보기
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <span className="text-xs text-gray-400">2024.02</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-orange-500 to-red-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">광고용 이벤트 페이지</h3>
-                <p className="text-gray-600 mb-4">구글 애즈 최적화<br />고전환율 달성</p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>작업기간: 3일</span>
+            {/* Portfolio 3 - 스타트업 MVP */}
+            <div className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+              {/* Project Preview */}
+              <div className="relative h-64 bg-gradient-to-br from-orange-100 via-red-50 to-pink-100 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/20"></div>
+                <div className="absolute top-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-gray-200 rounded w-5/6"></div>
+                      <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+                      <div className="h-8 bg-gradient-to-r from-orange-400 to-red-500 rounded-lg"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                    <Globe className="h-6 w-6 text-red-600" />
+                  </div>
                 </div>
               </div>
+
+              {/* Project Details */}
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">💻</span>
+                    </div>
+                    <span className="text-sm font-medium text-gray-500">스타트업 MVP</span>
+                  </div>
+                  <div className="flex items-center space-x-1 text-yellow-400">
+                    <Star className="h-4 w-4 fill-current" />
+                    <span className="text-sm font-medium text-gray-600">5.0</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                  피트니스 예약 플랫폼 소개페이지
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  예비 창업팀을 위한 MVP 서비스 소개 페이지
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    서비스 설명 + 기능 소개
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    Supabase 이메일 저장 시스템
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                    클로즈베타 신청 관리
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-4 mb-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-2xl font-bold text-red-600">4.3%</div>
+                      <div className="text-sm text-gray-600">구글애즈 전환률</div>
+                    </div>
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center">
+                      <Zap className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <a 
+                    href="https://fitreserve.vercel.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-red-600 hover:text-red-700 font-medium text-sm group-hover:underline"
+                  >
+                    사이트 보기
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  <span className="text-xs text-gray-400">2024.03</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-12 sm:mt-16 lg:mt-20">
+            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl p-8 sm:p-12 text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+                당신의 프로젝트도 성공 사례로 만들어보세요
+              </h3>
+              <p className="text-lg sm:text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+                지금까지 50+ 프로젝트를 성공적으로 완료했습니다. 다음은 당신의 차례입니다.
+              </p>
+              <a 
+                href="#contact" 
+                className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-bold text-lg rounded-full hover:bg-gray-100 transition-colors transform hover:scale-105"
+              >
+                프로젝트 시작하기
+                <span className="ml-2">→</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      */}
 
       {/* FAQ Section */}
       <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-white">
