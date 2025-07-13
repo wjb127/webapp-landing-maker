@@ -242,7 +242,7 @@ export default function Home() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-lg font-semibold mb-2">사후 지원은 어떻게 되나요?</h3>
               <p className="text-gray-600">
-                납품 후 1개월간 무료 A/S를 제공하며, 이후에도 유지보수 서비스를 합리적인 가격으로 제공합니다.
+                납품 후 1개월간 무료 A/S를 제공하며, 이후 수정 1건당 1천원 수준으로 제공해드립니다.
               </p>
             </div>
 
