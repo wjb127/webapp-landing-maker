@@ -1,15 +1,10 @@
 import { 
   Code, 
   Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
   Mail, 
   MessageCircle,
   Clock,
   Star,
-  Users,
-  Smartphone,
   Monitor,
   BarChart3,
   Globe
