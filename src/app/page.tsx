@@ -3,7 +3,6 @@ import {
   Zap, 
   Mail, 
   MessageCircle,
-  Clock,
   Star,
   Monitor,
   BarChart3,
