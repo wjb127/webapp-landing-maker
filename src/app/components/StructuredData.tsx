@@ -6,7 +6,7 @@ export default function StructuredData() {
     "description": "랜딩페이지, 관리자 대시보드, 광고용 웹페이지 제작 전문. 최신 기술 스택 기반 맞춤형 웹개발 서비스",
     "url": "https://webapp-landing-maker.vercel.app",
     "telephone": "+82-10-0000-0000",
-    "email": "your-email@example.com",
+    "email": "wjb127@naver.com",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "KR",

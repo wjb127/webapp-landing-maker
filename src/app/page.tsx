@@ -270,7 +270,7 @@ export default function Home() {
             <div className="text-center">
               <Mail className="h-12 w-12 mx-auto mb-4 text-blue-200" />
               <h3 className="text-lg font-semibold mb-2">이메일</h3>
-              <p className="text-blue-100">your-email@example.com</p>
+              <p className="text-blue-100">wjb127@naver.com</p>
             </div>
 
             <div className="text-center">
@@ -335,7 +335,7 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">연락처</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>이메일: your-email@example.com</li>
+                <li>이메일: wjb127@naver.com</li>
                 <li>카카오톡: @your-kakao-id</li>
                 <li>크몽: 프로필 링크</li>
               </ul>
