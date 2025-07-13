@@ -228,7 +228,7 @@ export default function Home() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-lg font-semibold mb-2">결제 방식은 어떻게 되나요?</h3>
               <p className="text-gray-600">
-                크몽을 통한 안전결제 또는 계좌이체 모두 가능합니다. 50% 선입금 후 작업 시작, 나머지 50%는 완료 후 지급입니다.
+                크몽을 통한 안전결제 또는 계좌이체 모두 가능합니다. 프로젝트 규모에 따라 결제 방식을 협의하여 진행합니다.
               </p>
             </div>
 
