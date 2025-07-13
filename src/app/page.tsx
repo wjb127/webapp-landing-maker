@@ -103,21 +103,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-12 sm:pt-16 animate-slide-up delay-700">
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-yellow-300 mb-2">50+</div>
-                <div className="text-sm sm:text-base text-blue-200">완료된 프로젝트</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-green-300 mb-2">98%</div>
-                <div className="text-sm sm:text-base text-blue-200">고객 만족도</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-purple-300 mb-2">24H</div>
-                <div className="text-sm sm:text-base text-blue-200">평균 응답 시간</div>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -499,128 +485,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              고객 후기
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              <span className="block">실제 고객들의</span>
-              <span className="block bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">생생한 후기</span>
-            </h2>
-            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              만족한 고객들의 진솔한 이야기를 들어보세요
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-              <div className="flex items-center mb-6">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
-                  ))}
-                </div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                &ldquo;랜딩페이지 제작을 의뢰했는데, 기대 이상의 결과물이 나왔습니다. 
-                특히 모바일 최적화가 정말 잘 되어있고, SEO도 완벽하게 적용해주셨어요. 
-                덕분에 전환율이 30% 이상 증가했습니다!&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">김</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">김○○ 대표</h4>
-                  <p className="text-sm text-gray-600">온라인 쇼핑몰 운영</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-              <div className="flex items-center mb-6">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
-                  ))}
-                </div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                &ldquo;관리자 대시보드 개발을 맡겼는데, 정말 직관적이고 사용하기 편하게 만들어주셨습니다. 
-                복잡한 데이터도 한눈에 보기 쉽게 정리되어 있어서 업무 효율이 크게 향상되었어요. 
-                소통도 원활하고 일정도 정확히 지켜주셔서 만족합니다.&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">이</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">이○○ 팀장</h4>
-                  <p className="text-sm text-gray-600">IT 스타트업</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-              <div className="flex items-center mb-6">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
-                  ))}
-                </div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                &ldquo;급하게 이벤트 페이지가 필요했는데, 3일 만에 완성해주셨어요! 
-                디자인도 세련되고 로딩 속도도 빨라서 광고 효과가 정말 좋았습니다. 
-                다음에도 또 의뢰하고 싶어요. 빠른 대응과 높은 품질 모두 만족합니다.&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">박</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">박○○ 마케터</h4>
-                  <p className="text-sm text-gray-600">마케팅 에이전시</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-12 sm:mt-16 lg:mt-20">
-            <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-gray-100">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">100%</div>
-                  <div className="text-gray-600">프로젝트 완료율</div>
-                </div>
-                <div>
-                  <div className="text-3xl sm:text-4xl font-bold text-green-600 mb-2">평균 4.9</div>
-                  <div className="text-gray-600">고객 만족도</div>
-                </div>
-                <div>
-                  <div className="text-3xl sm:text-4xl font-bold text-purple-600 mb-2">1개월</div>
-                  <div className="text-gray-600">무료 A/S 기간</div>
-                </div>
-                <div>
-                  <div className="text-3xl sm:text-4xl font-bold text-orange-600 mb-2">2시간</div>
-                  <div className="text-gray-600">평균 응답 시간</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Portfolio Section - Hidden for now */}
       {/* 
@@ -704,7 +569,7 @@ export default function Home() {
                     작업 기간은 얼마나 걸리나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    프로젝트 규모에 따라 다르지만, 일반적인 랜딩페이지는 <span className="font-semibold text-blue-600">3-7일</span>, 
+                    프로젝트 규모에 따라 다르지만, 일반적인 랜딩페이지는 <span className="font-semibold text-blue-600">1-3일</span>, 
                     관리자 대시보드는 <span className="font-semibold text-blue-600">1-2주</span> 정도 소요됩니다. 
                     급한 경우 추가 비용으로 단축 가능합니다.
                   </p>
