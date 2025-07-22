@@ -37,7 +37,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Compact for Kmong Thumbnail */}
-      <section className="relative h-screen max-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900">
+      <section className="relative min-h-[700px] h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900">
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/30"></div>
@@ -59,10 +59,10 @@ export default function Home() {
 
         {/* Main Content - Horizontal Layout */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             
             {/* Left Side - Text Content */}
-            <div className="text-center lg:text-left space-y-6">
+            <div className="text-center lg:text-left space-y-4">
               {/* Top Line */}
               <p className="text-lg text-yellow-300 font-medium animate-slide-up">
                 오늘 문의하면 내일 결과가 나오는
@@ -79,8 +79,6 @@ export default function Home() {
               </h1>
 
               
-
-
               {/* CTA Button */}
               <div className="animate-slide-up delay-1000">
                 <a 
