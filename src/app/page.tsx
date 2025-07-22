@@ -12,11 +12,13 @@ import {
   CheckCircle
 } from 'lucide-react'
 import StructuredData from './components/StructuredData'
+import FAQStructuredData from './components/FAQStructuredData'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <StructuredData />
+      <FAQStructuredData />
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,12 +27,12 @@ export default function Home() {
               <Code className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
               <span className="ml-2 text-lg sm:text-xl font-bold text-gray-900">웹개발 외주 전문</span>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors">서비스</a>
-              <a href="#process" className="text-gray-500 hover:text-gray-900 transition-colors">작업절차</a>
-              <a href="#portfolio" className="text-gray-500 hover:text-gray-900 transition-colors">포트폴리오</a>
-              <a href="#faq" className="text-gray-500 hover:text-gray-900 transition-colors">FAQ</a>
-              <a href="#contact" className="text-gray-500 hover:text-gray-900 transition-colors">연락처</a>
+            <nav className="hidden md:flex space-x-8" aria-label="메인 내비게이션">
+              <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="서비스 섹션으로 이동">서비스</a>
+              <a href="#process" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="작업절차 섹션으로 이동">작업절차</a>
+              <a href="#portfolio" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="포트폴리오 섹션으로 이동">포트폴리오</a>
+              <a href="#faq" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="자주 묻는 질문 섹션으로 이동">FAQ</a>
+              <a href="#contact" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="연락처 섹션으로 이동">연락처</a>
             </nav>
           </div>
         </div>
@@ -69,7 +71,7 @@ export default function Home() {
               </p>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight animate-slide-up delay-300">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight animate-slide-up delay-300" itemProp="name">
                 <span className="block bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent drop-shadow-lg">
                   초고속
                 </span>
@@ -85,7 +87,7 @@ export default function Home() {
                   href="https://kmong.com/gig/657211" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 font-black text-lg rounded-full hover:from-yellow-300 hover:to-red-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/40"
+                  className="group relative inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 font-black text-lg rounded-full hover:from-yellow-300 hover:to-red-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/40 min-h-[48px] min-w-[48px] touch-manipulation"
                 >
                   <MessageCircle className="h-5 w-5" />
                   <span className="relative z-10">지금 문의하기</span>
@@ -174,12 +176,12 @@ export default function Home() {
               전문 서비스
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              <span className="block">어떤 웹사이트든</span>
-              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">완벽하게 제작</span>
+              <span className="block">맞춤형 웹개발 서비스로</span>
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">완벽한 웹사이트 제작</span>
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              비즈니스 목적에 맞는 맞춤형 웹사이트를 빠르고 정확하게 제작합니다
-            </p>
+                          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                비즈니스 목적에 맞는 <strong>맞춤형 웹개발 서비스</strong>로 <em>빠른 납기</em>와 고품질의 반응형 웹사이트를 제작합니다
+              </p>
             
             {/* Key Features */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
@@ -206,14 +208,15 @@ export default function Home() {
             <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Globe className="h-8 w-8 text-white" />
-                </div>
+                                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" role="img" aria-label="랜딩페이지 제작 서비스 아이콘">
+                    <Globe className="h-8 w-8 text-white" aria-hidden="true" />
+                  </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                  랜딩페이지
+                  초고속 랜딩페이지 제작
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  제품/서비스 홍보용 고품질 랜딩페이지 제작
+                  제품/서비스 홍보용 고품질 <a href="#portfolio" className="text-blue-600 hover:underline">랜딩페이지 제작</a> 서비스. 
+                  <strong>SEO 최적화</strong>와 <em>빠른 로딩 속도</em>로 전환율을 극대화합니다.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-500">
                   <li className="flex items-center">
@@ -243,7 +246,7 @@ export default function Home() {
                   데이터 수집
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  자동화된 데이터 수집 및 분석 시스템 구축
+                  자동화된 데이터 수집 및 <a href="#process" className="text-green-600 hover:underline">분석 시스템 구축</a>
                 </p>
                 <ul className="space-y-2 text-sm text-gray-500">
                   <li className="flex items-center">
@@ -356,9 +359,9 @@ export default function Home() {
               <span className="block">체계적인 작업 절차로</span>
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">완벽한 결과물 보장</span>
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              투명한 프로세스로 고객과 소통하며 최고의 품질을 만들어갑니다
-            </p>
+                          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                <strong>5년간의 웹개발 경험</strong>과 투명한 프로세스로 고객과 소통하며 <em>검증된 품질</em>의 웹사이트를 제작합니다
+              </p>
           </div>
 
           {/* Desktop Timeline */}
@@ -686,7 +689,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-white">
+      <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-white" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">

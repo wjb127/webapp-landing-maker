@@ -5,12 +5,22 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '웹개발 외주 전문 | 빠른 납기, 깔끔한 완성도',
-  description: '랜딩페이지, 관리자 대시보드, 광고용 웹페이지 제작 전문. 최신 기술 스택 기반 맞춤형 웹개발 서비스',
-  keywords: '웹개발, 외주, 랜딩페이지, 광고용 웹페이지, 관리자 대시보드, 맞춤형 웹사이트',
-  authors: [{ name: '웹개발 외주 전문가' }],
-  creator: '웹개발 외주 전문가',
-  publisher: '웹개발 외주 전문가',
+  title: {
+    default: '웹개발 외주 전문 | 초고속 랜딩페이지 제작 24시간 완성 - 데브원엘',
+    template: '%s | 데브원엘 웹개발 외주'
+  },
+  description: '24시간 내 완성하는 초고속 랜딩페이지 제작 전문! React, Next.js 기반 반응형 웹사이트, 관리자 대시보드, 광고용 페이지를 빠른 납기로 제작합니다. 크몽 인증 개발자 데브원엘의 맞춤형 웹개발 서비스로 무제한 수정 지원까지 받아보세요.',
+  keywords: [
+    '웹개발 외주', '랜딩페이지 제작', '초고속 웹개발', '크몽 웹개발',
+    '반응형 웹사이트', '관리자 대시보드', '광고용 웹페이지', 'React 개발',
+    'Next.js 개발', '웹사이트 제작', '데브원엘', '맞춤형 웹개발',
+    '24시간 제작', '빠른 납기', '웹개발 전문가'
+  ],
+  authors: [{ name: '데브원엘', url: 'https://kmong.com/@%EB%8D%B0%EB%B8%8C%EC%9B%90%EC%97%98' }],
+  creator: '데브원엘 (DevOneL)',
+  publisher: '데브원엘 웹개발 외주',
+  category: 'Technology',
+  classification: 'Web Development Services',
   formatDetection: {
     email: false,
     address: false,
@@ -20,27 +30,47 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: {
+      'naver-site-verification': process.env.NAVER_SITE_VERIFICATION || '',
+    },
+  },
   openGraph: {
-    title: '웹개발 외주 전문 | 빠른 납기, 깔끔한 완성도',
-    description: '랜딩페이지, 관리자 대시보드, 광고용 웹페이지 제작 전문. 최신 기술 스택 기반 맞춤형 웹개발 서비스',
+    title: '초고속 랜딩페이지 제작 전문 | 24시간 내 완성 - 데브원엘',
+    description: '크몽 인증 개발자가 만드는 고품질 웹사이트! React, Next.js 기반 반응형 랜딩페이지, 관리자 대시보드, 광고용 페이지를 24시간 내 제작. 무제한 수정 지원.',
     url: 'https://webapp-landing-maker.vercel.app',
-    siteName: '웹개발 외주 전문',
+    siteName: '데브원엘 웹개발 외주',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: '웹개발 외주 전문 서비스',
+        alt: '데브원엘 초고속 랜딩페이지 제작 서비스 - 24시간 내 완성',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/og-image-square.jpg',
+        width: 400,
+        height: 400,
+        alt: '데브원엘 웹개발 외주 로고',
+        type: 'image/jpeg',
       },
     ],
     locale: 'ko_KR',
     type: 'website',
+    emails: ['wjb127@naver.com'],
+    phoneNumbers: [],
+    faxNumbers: [],
+    alternateLocale: ['en_US'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '웹개발 외주 전문 | 빠른 납기, 깔끔한 완성도',
-    description: '랜딩페이지, 관리자 대시보드, 광고용 웹페이지 제작 전문',
+    title: '초고속 랜딩페이지 제작 전문 - 데브원엘',
+    description: '24시간 내 완성하는 고품질 웹사이트! React, Next.js 기반 반응형 웹개발 전문',
     images: ['/og-image.jpg'],
+    creator: '@devoneel',
+    site: '@devoneel',
   },
   robots: {
     index: true,
@@ -61,7 +91,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko-KR">
+      <head>
+        <link rel="alternate" hrefLang="ko" href="https://webapp-landing-maker.vercel.app" />
+        <link rel="alternate" hrefLang="x-default" href="https://webapp-landing-maker.vercel.app" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://kmong.com" />
+        <link rel="dns-prefetch" href="https://portfolio-landing-peach.vercel.app" />
+      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         {children}
       </body>
