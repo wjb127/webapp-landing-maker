@@ -360,7 +360,7 @@ export default function Home() {
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">완벽한 결과물 보장</span>
             </h2>
                           <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                <strong>5년간의 웹개발 경험</strong>과 투명한 프로세스로 고객과 소통하며 <em>검증된 품질</em>의 웹사이트를 제작합니다
+                <strong>3년간의 웹개발 경험</strong>과 투명한 프로세스로 고객과 소통하며 <em>검증된 품질</em>의 웹사이트를 제작합니다
               </p>
           </div>
 
