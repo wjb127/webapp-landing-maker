@@ -9,7 +9,6 @@ declare global {
   }
 }
 
-type GtagEvent = 'conversion' | 'click' | 'contact';
 type GtagConfig = Record<string, string | number>;
 
 export const trackConversion = (conversionLabel?: string): void => {
