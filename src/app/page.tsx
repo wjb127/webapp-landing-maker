@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import StructuredData from './components/StructuredData'
 import FAQStructuredData from './components/FAQStructuredData'
+import { trackContactForm, trackButtonClick } from './components/GoogleAdsTracking'
 
 export default function Home() {
   return (
@@ -87,6 +88,7 @@ export default function Home() {
                   href="https://kmong.com/gig/657211" 
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContactForm()}
                   className="group relative inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 font-black text-lg rounded-full hover:from-yellow-300 hover:to-red-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/40 min-h-[48px] min-w-[48px] touch-manipulation"
                 >
                   <MessageCircle className="h-5 w-5" />
@@ -625,6 +627,7 @@ export default function Home() {
                   href="https://portfolio-landing-peach.vercel.app/#portfolio" 
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackButtonClick('portfolio_view')}
                   className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-full hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <Globe className="h-5 w-5" />
@@ -863,6 +866,7 @@ export default function Home() {
               href="https://kmong.com/gig/657211" 
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackContactForm()}
               className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-lg rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/25"
             >
               <span className="relative z-10 flex items-center justify-center">

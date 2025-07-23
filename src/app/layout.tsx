@@ -99,6 +99,19 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://kmong.com" />
         <link rel="dns-prefetch" href="https://portfolio-landing-peach.vercel.app" />
+        
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17182549720"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17182549720');
+            `,
+          }}
+        />
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         {children}
