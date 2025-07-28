@@ -840,32 +840,32 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
-            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 mb-8 sm:mb-12">
+            <div className="group bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-2xl p-3 sm:p-4 lg:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 text-center">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
+                <Mail className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">이메일</h3>
-              <p className="text-blue-100 text-xs sm:text-sm mb-2 sm:mb-4">빠른 상담 및 견적 문의</p>
-              <p className="text-white font-semibold text-sm sm:text-base">wjb127@naver.com</p>
+              <h3 className="text-xs sm:text-base lg:text-lg font-bold mb-1">이메일</h3>
+              <p className="text-blue-100 text-xs leading-tight mb-1 sm:mb-2">빠른 상담</p>
+              <p className="text-white font-semibold text-xs sm:text-sm lg:text-base break-all">wjb127@naver.com</p>
             </div>
 
-            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+            <div className="group bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-2xl p-3 sm:p-4 lg:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 text-center">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
+                <MessageCircle className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">카카오톡</h3>
-              <p className="text-blue-100 text-xs sm:text-sm mb-2 sm:mb-4">실시간 채팅 상담</p>
-              <p className="text-white font-semibold text-sm sm:text-base">loantail</p>
+              <h3 className="text-xs sm:text-base lg:text-lg font-bold mb-1">카카오톡</h3>
+              <p className="text-blue-100 text-xs leading-tight mb-1 sm:mb-2">실시간 상담</p>
+              <p className="text-white font-semibold text-xs sm:text-sm lg:text-base">loantail</p>
             </div>
 
-            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Star className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+            <div className="group bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-2xl p-3 sm:p-4 lg:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 text-center">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
+                <Star className="h-4 w-4 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">크몽</h3>
-              <p className="text-blue-100 text-xs sm:text-sm mb-2 sm:mb-4">안전한 결제 시스템</p>
-              <p className="text-white font-semibold text-sm sm:text-base">프로필 보기</p>
+              <h3 className="text-xs sm:text-base lg:text-lg font-bold mb-1">크몽</h3>
+              <p className="text-blue-100 text-xs leading-tight mb-1 sm:mb-2">안전 결제</p>
+              <p className="text-white font-semibold text-xs sm:text-sm lg:text-base">프로필 보기</p>
             </div>
           </div>
 
