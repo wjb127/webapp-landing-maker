@@ -6,6 +6,13 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+}
+
 export const metadata: Metadata = {
   title: {
     default: '웹개발 외주 전문 | 초고속 랜딩페이지 제작 24시간 완성 - 데브원엘',
