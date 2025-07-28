@@ -340,16 +340,16 @@ export default function Home() {
 
           {/* CTA Section */}
           <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 sm:p-12 text-white">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                 어떤 프로젝트든 상담해보세요
               </h3>
-              <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 아이디어만 있으면 됩니다. 나머지는 저희가 해결해드릴게요.
               </p>
               <a 
                 href="#contact" 
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-full hover:bg-gray-100 transition-colors transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-slate-600 text-white font-bold text-lg rounded-full hover:bg-slate-700 transition-colors transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 무료 상담 받기
                 <span className="ml-2">→</span>
