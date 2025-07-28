@@ -377,196 +377,70 @@ export default function Home() {
               </p>
           </div>
 
-          {/* Desktop Timeline */}
-          <div className="hidden lg:block relative">
-            {/* Timeline Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-orange-200 transform -translate-y-1/2 rounded-full"></div>
-            
-            <div className="relative grid grid-cols-5 gap-8">
-              {/* Step 1 */}
-              <div className="text-center group">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative z-10">
-                    <Mail className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -left-2 w-24 h-24 bg-blue-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">1. 문의</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    요구사항 파악 및<br />
-                    초기 상담 진행
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="text-center group">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative z-10">
-                    <FileText className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -left-2 w-24 h-24 bg-green-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">2. 견적</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    상세 견적서 제공<br />
-                    일정 및 비용 협의
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="text-center group">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative z-10">
-                    <Code className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -left-2 w-24 h-24 bg-purple-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">3. 제작</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    개발 진행 및<br />
-                    중간 보고서 제공
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="text-center group">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative z-10">
-                    <Settings className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -left-2 w-24 h-24 bg-orange-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">4. 수정</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    피드백 반영 및<br />
-                    최종 품질 조정
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 5 */}
-              <div className="text-center group">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative z-10">
-                    <CheckCircle className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -left-2 w-24 h-24 bg-teal-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">5. 납품</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    배포 완료 및<br />
-                    사후 지원 제공
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile Timeline */}
-          <div className="lg:hidden space-y-8">
+          {/* Desktop and Mobile Process Grid */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
             {/* Step 1 */}
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                  <Mail className="h-8 w-8 text-white" />
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Mail className="h-5 w-5 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-white" />
                 </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">1. 문의</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  요구사항 파악 및 초기 상담 진행
+                <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">1. 문의</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-tight">
+                  요구사항 파악<br className="sm:hidden" />
+                  <span className="hidden sm:inline">및 </span>초기 상담
                 </p>
               </div>
-            </div>
-
-            {/* Connector */}
-            <div className="flex justify-center">
-              <div className="w-0.5 h-8 bg-gradient-to-b from-blue-300 to-green-300"></div>
             </div>
 
             {/* Step 2 */}
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
-                  <FileText className="h-8 w-8 text-white" />
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-purple-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Code className="h-5 w-5 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-white" />
                 </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">2. 견적</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  상세 견적서 제공 및 일정 협의
+                <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">2. 제작</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-tight">
+                  개발 진행<br className="sm:hidden" />
+                  <span className="hidden sm:inline">및 </span>중간 보고
                 </p>
               </div>
-            </div>
-
-            {/* Connector */}
-            <div className="flex justify-center">
-              <div className="w-0.5 h-8 bg-gradient-to-b from-green-300 to-purple-300"></div>
             </div>
 
             {/* Step 3 */}
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
-                  <Code className="h-8 w-8 text-white" />
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-green-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <FileText className="h-5 w-5 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-white" />
                 </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">3. 제작</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  개발 진행 및 중간 보고서 제공
+                <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">3. 결제</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-tight">
+                  견적 확인<br className="sm:hidden" />
+                  <span className="hidden sm:inline">및 </span>안전 결제
                 </p>
               </div>
-            </div>
-
-            {/* Connector */}
-            <div className="flex justify-center">
-              <div className="w-0.5 h-8 bg-gradient-to-b from-purple-300 to-orange-300"></div>
             </div>
 
             {/* Step 4 */}
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-lg">
-                  <Settings className="h-8 w-8 text-white" />
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Settings className="h-5 w-5 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-white" />
                 </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">4. 수정</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  피드백 반영 및 최종 품질 조정
-                </p>
-              </div>
-            </div>
-
-            {/* Connector */}
-            <div className="flex justify-center">
-              <div className="w-0.5 h-8 bg-gradient-to-b from-orange-300 to-teal-300"></div>
-            </div>
-
-            {/* Step 5 */}
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg">
-                  <CheckCircle className="h-8 w-8 text-white" />
-                </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">5. 납품</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  배포 완료 및 사후 지원 제공
+                <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">4. 수정</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-tight">
+                  피드백 반영<br className="sm:hidden" />
+                  <span className="hidden sm:inline">및 </span>최종 완성
                 </p>
               </div>
             </div>
           </div>
+
+
         </div>
       </section>
 
