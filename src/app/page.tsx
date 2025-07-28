@@ -10,8 +10,7 @@ import {
   Globe,
   Database,
   FileText,
-  Settings,
-  CheckCircle
+  Settings
 } from 'lucide-react'
 import StructuredData from './components/StructuredData'
 import FAQStructuredData from './components/FAQStructuredData'
