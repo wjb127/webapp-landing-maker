@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import StructuredData from './components/StructuredData'
 import FAQStructuredData from './components/FAQStructuredData'
+import MobileMenu from './components/MobileMenu'
 import { trackContactForm, trackButtonClick } from './components/GoogleAdsTracking'
 
 export default function Home() {
@@ -25,11 +26,13 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4 md:py-6">
+          <div className="flex justify-between items-center py-3 md:py-6">
             <div className="flex items-center">
               <Code className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
-              <span className="ml-2 text-lg sm:text-xl font-bold text-gray-900">웹개발 외주 전문</span>
+              <span className="ml-2 text-base sm:text-lg md:text-xl font-bold text-gray-900">웹개발 외주 전문</span>
             </div>
+            
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8" aria-label="메인 내비게이션">
               <a href="#services" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="서비스 섹션으로 이동">서비스</a>
               <a href="#process" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="작업절차 섹션으로 이동">작업절차</a>
@@ -37,12 +40,15 @@ export default function Home() {
               <a href="#faq" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="자주 묻는 질문 섹션으로 이동">FAQ</a>
               <a href="#contact" className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="연락처 섹션으로 이동">연락처</a>
             </nav>
+
+            {/* Mobile Menu */}
+            <MobileMenu onContactClick={() => trackContactForm()} />
           </div>
         </div>
       </header>
 
-      {/* Hero Section - Compact for Kmong Thumbnail */}
-      <section className="relative min-h-[700px] h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900">
+      {/* Hero Section - Mobile Optimized */}
+      <section className="relative min-h-[600px] sm:min-h-[700px] h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900">
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/30"></div>
@@ -62,19 +68,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Main Content - Horizontal Layout */}
+        {/* Main Content - Mobile Optimized Layout */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
             
             {/* Left Side - Text Content */}
-            <div className="text-center lg:text-left space-y-4">
+            <div className="text-center lg:text-left space-y-4 sm:space-y-6">
               {/* Top Line */}
-              <p className="text-lg text-yellow-300 font-medium animate-slide-up">
+              <p className="text-base sm:text-lg text-yellow-300 font-medium animate-slide-up">
                 오늘 문의하면 내일 결과가 나오는
               </p>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight animate-slide-up delay-300" itemProp="name">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight animate-slide-up delay-300" itemProp="name">
                 <span className="block bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent drop-shadow-lg">
                   초고속
                 </span>
@@ -85,15 +91,15 @@ export default function Home() {
 
               
               {/* CTA Button */}
-              <div className="animate-slide-up delay-1000">
+              <div className="animate-slide-up delay-1000 pt-2">
                 <a 
                   href="https://kmong.com/gig/657211" 
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackContactForm()}
-                  className="group relative inline-flex items-center gap-3 px-8 py-5 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 font-black text-lg rounded-full hover:from-yellow-300 hover:to-red-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/40 min-h-[48px] min-w-[48px] touch-manipulation"
+                  className="group relative inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-gray-900 font-black text-base sm:text-lg rounded-full hover:from-yellow-300 hover:to-red-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/40 min-h-[48px] min-w-[48px] touch-manipulation"
                 >
-                  <MessageCircle className="h-5 w-5" />
+                  <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                   <span className="relative z-10">지금 문의하기</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-red-300 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
@@ -101,25 +107,25 @@ export default function Home() {
             </div>
 
             {/* Right Side - Landing Page Visual */}
-            <div className="flex justify-center lg:justify-end animate-fade-in">
+            <div className="flex justify-center lg:justify-end animate-fade-in mt-8 lg:mt-0">
               <div className="relative">
                 {/* Desktop Browser Window Mockup */}
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl w-80 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl w-72 sm:w-80 transform rotate-1 sm:rotate-2 hover:rotate-0 transition-transform duration-500">
                   {/* Browser Header */}
-                  <div className="bg-gray-200 rounded-t-xl px-3 py-2 flex items-center gap-2">
+                  <div className="bg-gray-200 rounded-t-xl px-2 sm:px-3 py-1.5 sm:py-2 flex items-center gap-1 sm:gap-2">
                     <div className="flex gap-1">
-                      <div className="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
-                      <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
-                      <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+                      <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full"></div>
+                      <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-green-500 rounded-full"></div>
                     </div>
-                    <div className="flex-1 bg-white mx-3 px-2 py-1 rounded text-xs text-gray-500 flex items-center gap-1">
-                      <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    <div className="flex-1 bg-white mx-2 sm:mx-3 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-xs text-gray-500 flex items-center gap-1">
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full"></div>
                       <span className="text-xs">yoursite.com</span>
                     </div>
                   </div>
                   
                   {/* Landing Page Content */}
-                  <div className="p-6 space-y-4">
+                  <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                     {/* Hero Section */}
                     <div className="text-center space-y-3">
                       <div className="h-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg mx-4"></div>
@@ -188,26 +194,26 @@ export default function Home() {
               </p>
             
             {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200 hover:shadow-lg transition-shadow">
-                <div className="text-4xl font-bold text-yellow-500 mb-3">24H</div>
-                <div className="text-lg font-semibold text-gray-800 mb-2">초고속 제작</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 sm:p-8 border border-yellow-200 hover:shadow-lg transition-shadow">
+                <div className="text-3xl sm:text-4xl font-bold text-yellow-500 mb-2 sm:mb-3">24H</div>
+                <div className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">초고속 제작</div>
                 <div className="text-sm text-gray-600">급한 프로젝트도 빠르게 완성</div>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200 hover:shadow-lg transition-shadow">
-                <div className="text-4xl font-bold text-green-500 mb-3">100%</div>
-                <div className="text-lg font-semibold text-gray-800 mb-2">맞춤 제작</div>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 sm:p-8 border border-green-200 hover:shadow-lg transition-shadow">
+                <div className="text-3xl sm:text-4xl font-bold text-green-500 mb-2 sm:mb-3">100%</div>
+                <div className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">맞춤 제작</div>
                 <div className="text-sm text-gray-600">고객 요구사항에 완벽 부합</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border border-purple-200 hover:shadow-lg transition-shadow">
-                <div className="text-4xl font-bold text-purple-500 mb-3">무제한</div>
-                <div className="text-lg font-semibold text-gray-800 mb-2">수정 지원</div>
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6 sm:p-8 border border-purple-200 hover:shadow-lg transition-shadow">
+                <div className="text-3xl sm:text-4xl font-bold text-purple-500 mb-2 sm:mb-3">무제한</div>
+                <div className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">수정 지원</div>
                 <div className="text-sm text-gray-600">만족할 때까지 무료 수정</div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {/* Service 1 */}
             <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -710,14 +716,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="group bg-gradient-to-r from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="group bg-gradient-to-r from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                     작업 기간은 얼마나 걸리나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -729,13 +735,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-green-50 to-teal-50 hover:from-green-100 hover:to-teal-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
+            <div className="group bg-gradient-to-r from-green-50 to-teal-50 hover:from-green-100 hover:to-teal-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-green-600 transition-colors">
                     결제 방식은 어떻게 되나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -747,13 +753,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-orange-50 to-red-50 hover:from-orange-100 hover:to-red-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
+            <div className="group bg-gradient-to-r from-orange-50 to-red-50 hover:from-orange-100 hover:to-red-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-orange-600 transition-colors">
                     수정은 몇 번까지 가능한가요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -765,13 +771,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
+            <div className="group bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors">
                     사후 지원은 어떻게 되나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -783,13 +789,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-teal-50 to-blue-50 hover:from-teal-100 hover:to-blue-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-100">
+            <div className="group bg-gradient-to-r from-teal-50 to-blue-50 hover:from-teal-100 hover:to-blue-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-100">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors">
                     어떤 기술을 사용하나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -834,45 +840,45 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
-            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Mail className="h-8 w-8 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
+            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">이메일</h3>
-              <p className="text-blue-100 text-sm mb-4">빠른 상담 및 견적 문의</p>
-              <p className="text-white font-semibold">wjb127@naver.com</p>
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">이메일</h3>
+              <p className="text-blue-100 text-xs sm:text-sm mb-2 sm:mb-4">빠른 상담 및 견적 문의</p>
+              <p className="text-white font-semibold text-sm sm:text-base">wjb127@naver.com</p>
             </div>
 
-            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <MessageCircle className="h-8 w-8 text-white" />
+            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">카카오톡</h3>
-              <p className="text-blue-100 text-sm mb-4">실시간 채팅 상담</p>
-              <p className="text-white font-semibold">loantail</p>
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">카카오톡</h3>
+              <p className="text-blue-100 text-xs sm:text-sm mb-2 sm:mb-4">실시간 채팅 상담</p>
+              <p className="text-white font-semibold text-sm sm:text-base">loantail</p>
             </div>
 
-            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Star className="h-8 w-8 text-white" />
+            <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-yellow-400 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Star className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2">크몽</h3>
-              <p className="text-blue-100 text-sm mb-4">안전한 결제 시스템</p>
-              <p className="text-white font-semibold">프로필 보기</p>
+              <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2">크몽</h3>
+              <p className="text-blue-100 text-xs sm:text-sm mb-2 sm:mb-4">안전한 결제 시스템</p>
+              <p className="text-white font-semibold text-sm sm:text-base">프로필 보기</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <a 
               href="https://kmong.com/gig/657211" 
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackContactForm()}
-              className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-lg rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/25"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-base sm:text-lg rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/25 min-h-[48px] touch-manipulation"
             >
               <span className="relative z-10 flex items-center justify-center">
-                <MessageCircle className="h-5 w-5 mr-2" />
+                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-2 flex-shrink-0" />
                 지금 의뢰하기
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -880,9 +886,9 @@ export default function Home() {
             
             <a 
               href="mailto:wjb127@naver.com" 
-              className="group px-8 py-4 border-2 border-white/30 text-white font-bold text-lg rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center"
+              className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 text-white font-bold text-base sm:text-lg rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center min-h-[48px] touch-manipulation"
             >
-              <MessageCircle className="h-5 w-5 mr-2" />
+              <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 mr-2 flex-shrink-0" />
               상담 문의하기
               <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
             </a>
