@@ -593,9 +593,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-4 sm:space-y-6">
-            <div className="group bg-gradient-to-r from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+            <div className="group bg-slate-50 hover:bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
@@ -611,13 +611,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-green-50 to-teal-50 hover:from-green-100 hover:to-teal-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
+            <div className="group bg-slate-50 hover:bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                     결제 방식은 어떻게 되나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -629,13 +629,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-orange-50 to-red-50 hover:from-orange-100 hover:to-red-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
+            <div className="group bg-slate-50 hover:bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200">
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                     수정은 몇 번까지 가능한가요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -647,13 +647,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
+            <div className="group bg-slate-50 hover:bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                     사후 지원은 어떻게 되나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -665,13 +665,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-r from-teal-50 to-blue-50 hover:from-teal-100 hover:to-blue-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-100">
+            <div className="group bg-slate-50 hover:bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                   <span className="text-white font-bold text-sm">Q</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-600 transition-colors">
                     어떤 기술을 사용하나요?
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
