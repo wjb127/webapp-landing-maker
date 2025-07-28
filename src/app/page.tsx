@@ -213,123 +213,126 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
             {/* Service 1 */}
-            <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10">
-                                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" role="img" aria-label="랜딩페이지 제작 서비스 아이콘">
-                    <Globe className="h-8 w-8 text-white" aria-hidden="true" />
-                  </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                  초고속 랜딩페이지 제작
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300" role="img" aria-label="랜딩페이지 제작 서비스 아이콘">
+                  <Globe className="h-5 w-5 sm:h-8 sm:w-8 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="text-sm sm:text-lg lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-4 group-hover:text-blue-600 transition-colors">
+                  랜딩페이지
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  제품/서비스 홍보용 고품질 <a href="#portfolio" className="text-blue-600 hover:underline">랜딩페이지 제작</a> 서비스. 
-                  <strong>SEO 최적화</strong>와 <em>빠른 로딩 속도</em>로 전환율을 극대화합니다.
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-6 leading-tight">
+                  고품질 홍보 페이지<br className="sm:hidden" />
+                  <span className="hidden sm:inline">SEO 최적화와 </span>빠른 로딩
                 </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
-                    반응형 디자인
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-500">
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-500 rounded-full mr-1 sm:mr-2"></div>
+                    반응형
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
-                    SEO 최적화
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-500 rounded-full mr-1 sm:mr-2"></div>
+                    SEO
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
-                    빠른 로딩 속도
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-500 rounded-full mr-1 sm:mr-2"></div>
+                    고속
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Service 2 */}
-            <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-green-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Database className="h-8 w-8 text-white" />
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-green-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Database className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                <h3 className="text-sm sm:text-lg lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-4 group-hover:text-green-600 transition-colors">
                   데이터 수집
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  자동화된 데이터 수집 및 <a href="#process" className="text-green-600 hover:underline">분석 시스템 구축</a>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-6 leading-tight">
+                  자동화 수집<br className="sm:hidden" />
+                  <span className="hidden sm:inline">및 </span>분석 시스템
                 </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
-                    웹 스크래핑
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-500">
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-green-500 rounded-full mr-1 sm:mr-2"></div>
+                    스크래핑
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-green-500 rounded-full mr-1 sm:mr-2"></div>
                     API 연동
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
-                    데이터 시각화
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-green-500 rounded-full mr-1 sm:mr-2"></div>
+                    시각화
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Service 3 */}
-            <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-purple-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <BarChart3 className="h-8 w-8 text-white" />
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-purple-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <BarChart3 className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                  관리자 대시보드
+                <h3 className="text-sm sm:text-lg lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-4 group-hover:text-purple-600 transition-colors">
+                  관리 대시보드
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  비즈니스 관리를 위한 직관적인 대시보드
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-6 leading-tight">
+                  비즈니스 관리<br className="sm:hidden" />
+                  <span className="hidden sm:inline">위한 </span>직관적 대시보드
                 </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
-                    실시간 모니터링
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-500">
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-purple-500 rounded-full mr-1 sm:mr-2"></div>
+                    실시간
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-purple-500 rounded-full mr-1 sm:mr-2"></div>
                     통계 분석
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
-                    사용자 관리
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-purple-500 rounded-full mr-1 sm:mr-2"></div>
+                    사용자
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Service 4 */}
-            <div className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="h-8 w-8 text-white" />
+            <div className="group relative bg-white rounded-lg sm:rounded-2xl p-3 sm:p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-orange-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-red-50 rounded-lg sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 text-center">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
-                  광고용 웹페이지
+                <h3 className="text-sm sm:text-lg lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-4 group-hover:text-orange-600 transition-colors">
+                  광고 페이지
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  높은 전환율을 위한 최적화된 광고 페이지
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-6 leading-tight">
+                  높은 전환율<br className="sm:hidden" />
+                  <span className="hidden sm:inline">위한 </span>최적화 페이지
                 </p>
-                <ul className="space-y-2 text-sm text-gray-500">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
-                    전환율 최적화
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-500">
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-orange-500 rounded-full mr-1 sm:mr-2"></div>
+                    전환율
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-orange-500 rounded-full mr-1 sm:mr-2"></div>
                     A/B 테스트
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
-                    빠른 로딩 속도
+                  <li className="flex items-center justify-center sm:justify-start">
+                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-orange-500 rounded-full mr-1 sm:mr-2"></div>
+                    고속 로딩
                   </li>
                 </ul>
               </div>
