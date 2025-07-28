@@ -195,20 +195,20 @@ export default function Home() {
             
             {/* Key Features */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 sm:p-8 border border-yellow-200 hover:shadow-lg transition-shadow">
-                <div className="text-3xl sm:text-4xl font-bold text-yellow-500 mb-2 sm:mb-3">24H</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">초고속 제작</div>
-                <div className="text-sm text-gray-600">급한 프로젝트도 빠르게 완성</div>
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-4 sm:p-6 lg:p-8 border border-yellow-200 hover:shadow-lg transition-shadow">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-500 mb-2">24H</div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-1">초고속 제작</div>
+                <div className="text-xs sm:text-sm text-gray-600 leading-tight">급한 프로젝트 빠른 완성</div>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 sm:p-8 border border-green-200 hover:shadow-lg transition-shadow">
-                <div className="text-3xl sm:text-4xl font-bold text-green-500 mb-2 sm:mb-3">100%</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">맞춤 제작</div>
-                <div className="text-sm text-gray-600">고객 요구사항에 완벽 부합</div>
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-4 sm:p-6 lg:p-8 border border-green-200 hover:shadow-lg transition-shadow">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-500 mb-2">100%</div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-1">맞춤 제작</div>
+                <div className="text-xs sm:text-sm text-gray-600 leading-tight">요구사항 완벽 부합</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6 sm:p-8 border border-purple-200 hover:shadow-lg transition-shadow">
-                <div className="text-3xl sm:text-4xl font-bold text-purple-500 mb-2 sm:mb-3">무제한</div>
-                <div className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">수정 지원</div>
-                <div className="text-sm text-gray-600">만족할 때까지 무료 수정</div>
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-4 sm:p-6 lg:p-8 border border-purple-200 hover:shadow-lg transition-shadow">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-500 mb-2">무제한</div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-1">수정 지원</div>
+                <div className="text-xs sm:text-sm text-gray-600 leading-tight">만족까지 무료 수정</div>
               </div>
             </div>
           </div>
